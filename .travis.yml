@@ -2,6 +2,9 @@ sudo: required
 
 language: bash
 
+jdk:
+  - oraclejdk8
+
 services:
   - docker
 
@@ -10,5 +13,6 @@ before_install:
   - sudo apt-get install -qq default-jdk
   - docker run bpetri/cagent_builder build_script > cagent_builder.sh && chmod +x cagent_builder.sh 
 
-install:
+install:	
+  - ./gradlew export
   - ./cagent_builder.sh make_bundles
