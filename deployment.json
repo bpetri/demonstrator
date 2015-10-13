@@ -13,7 +13,7 @@
         [
         {"includePattern": "deploy/(.*\.jar)", "uploadPattern": "c/$1"},
         {"includePattern": "org.inaetics.demonstrator.api/generated/(.*\.jar)", "uploadPattern": "java/org.inaetics.demonstrator.api/$1"},
-        {"includePattern": "org.inaetics.demonstrator.java_impl/generated/(.*\.jar)", "uploadPattern": "java/org.inaetics.demonstrator.java_impl/$1"}
+        {"includePattern": "org.inaetics.demonstrator.java_impl/generated/(.*).jar", "uploadPattern": "java/org.inaetics.demonstrator.java_impl/$1.jar"}
         ],
     "publish": true
 }
