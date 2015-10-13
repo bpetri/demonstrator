@@ -1,0 +1,19 @@
+{
+    "package": {
+        "name": "demonstrator", // Bintray package name
+        "repo": "inaetics", // Bintray repository name
+        "subject": "inaetics" // Bintray subject (user or organization)
+    },
+
+    "version": {
+        "name": "latest"
+    },
+
+    "files":
+        [
+        {"includePattern": "deploy/(.*\.jar)", "uploadPattern": "c/$1"},
+        {"includePattern": "org.inaetics.demonstrator.api/generated/(.*\.jar)", "uploadPattern": "java/org.inaetics.demonstrator.api/$1"},
+        {"includePattern": "org.inaetics.demonstrator.java_impl/generated/(.*\.jar)", "uploadPattern": "java/org.inaetics.demonstrator.java_impl/$1"}
+        ],
+    "publish": true
+}

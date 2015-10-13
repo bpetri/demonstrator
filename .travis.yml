@@ -12,5 +12,11 @@ before_install:
   - docker run bpetri/cagent_builder build_script > cagent_builder.sh && chmod +x cagent_builder.sh 
 
 install:	
-  - ./gradlew export
+  - ./gradlew build
   - ./cagent_builder.sh make_bundles
+
+deploy:
+  provider: bintray
+  file: $TRAVIS_BUILD_DIR/deployment.json
+  user: bpetri
+  key: $BINTRAY_KEY
